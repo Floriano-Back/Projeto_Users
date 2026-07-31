@@ -51,7 +51,7 @@ app.post("/users", (req, res) => {
 
 app.delete("/users/:id", (req, res) => {
   const qualId = Number(req.params.id);
-  const removeUser = users.findIndex(u => u.id === qualId);
+  const removeUser = users.findIndex(user => user.id === qualId);
 
   users.splice(removeUser, 1);
     
@@ -63,7 +63,7 @@ app.delete("/users/:id", (req, res) => {
 
 app.patch("/users/:id", (req, res) => {
   const qualId = Number(req.params.id);
-  const attUsers = users.findIndex(u => u.id === qualId);
+  const attUsers = users.findIndex(user => user.id === qualId);
 
   const { nome, email, sexo, telefone } = req.body;
   const userAtual = users[attUsers];
