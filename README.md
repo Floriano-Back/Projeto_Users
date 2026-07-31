@@ -1,0 +1,1 @@
+terminar para aula de sexta-feira
